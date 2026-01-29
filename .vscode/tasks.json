@@ -1,0 +1,70 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "API: build",
+      "type": "process",
+      "command": "dotnet",
+      "args": ["build", "InterviewTask.Api/InterviewTask.Api.fsproj"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "API: run",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "InterviewTask.Api/InterviewTask.Api.fsproj",
+        "--launch-profile",
+        "Run"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "API: watch",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "InterviewTask.Api/InterviewTask.Api.fsproj",
+        "--launch-profile",
+        "Watch"
+      ],
+      "isBackground": true,
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Tests: dotnet test",
+      "type": "process",
+      "command": "dotnet",
+      "args": ["test", "InterviewTask.Tests/InterviewTask.Tests.fsproj"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Web: install",
+      "type": "process",
+      "command": "npm",
+      "args": ["install"],
+      "options": {
+        "cwd": "${workspaceFolder}/interviewtask-web"
+      }
+    },
+    {
+      "label": "Web: dev",
+      "type": "process",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "options": {
+        "cwd": "${workspaceFolder}/interviewtask-web"
+      },
+      "isBackground": true
+    },
+    {
+      "label": "Dev: API + Web",
+      "dependsOn": ["API: watch", "Web: dev"],
+      "dependsOrder": "parallel"
+    }
+  ]
+}
