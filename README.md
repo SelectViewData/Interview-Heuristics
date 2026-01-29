@@ -12,7 +12,56 @@ No implementation work is expected in advance; we will provide tasks during the 
 
 - .NET SDK 10 (`dotnet --version` should show `10.x`)
 - Node.js 20+ and npm
+- Claude Code CLI (`claude -v` should work)
 - (Optional) VS Code + Ionide for F#
+
+### Claude Code (Required)
+
+You are welcome to use any other agentic coding CLI you prefer in addition to Claude Code.
+
+During the interview, we may ask you to also use Claude Code on your machine. We will provide a temporary API key during the meeting, but please install the Claude Code CLI before the interview.
+
+Install:
+
+macOS / Linux / WSL:
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+Windows:
+
+```powershell
+winget install Anthropic.ClaudeCode
+```
+
+Verify it works:
+
+```bash
+claude -v
+```
+
+During the interview, we will provide you with a temporary API key (so you don't incur any costs). Set it as an environment variable:
+
+macOS / Linux / WSL (Bash/Zsh):
+
+```bash
+export ANTHROPIC_API_KEY="PASTE_KEY_HERE"
+```
+
+Windows (PowerShell):
+
+```powershell
+$env:ANTHROPIC_API_KEY="PASTE_KEY_HERE"
+```
+
+Then run:
+
+```bash
+claude
+```
+
+Inside Claude Code, run `/status` to confirm authentication is active.
 
 ### Quick Start (Terminal)
 
@@ -52,7 +101,9 @@ dotnet test
 
 ## During the interview
 
-We will work together on a few small tasks. Expect a mix of:
+We will work together on a few small tasks. You can use your agentic CLI during the session, but we will also ask you to do some steps manually (e.g., reading code, running commands, and making focused edits).
+
+Expect a mix of:
 
 - Explaining how a part of the code works and how you would approach changing it.
 - Making a small backend change and validating it.
