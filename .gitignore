@@ -1,0 +1,8 @@
+**/bin/
+**/obj/
+
+interviewtask-web/node_modules/
+interviewtask-web/dist/
+interviewtask-web/tsconfig.tsbuildinfo
+interviewtask-web/package-lock.json
+

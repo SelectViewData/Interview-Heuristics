@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "API (.NET)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "API: build",
+      "program": "${workspaceFolder}/InterviewTask.Api/bin/Debug/net10.0/InterviewTask.Api.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/InterviewTask.Api",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5080"
+      },
+      "console": "integratedTerminal",
+      "serverReadyAction": {
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s/scalar/v1",
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "Web (Chrome)",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "preLaunchTask": "Web: dev",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/interviewtask-web"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Full stack (API + Web)",
+      "configurations": ["API (.NET)", "Web (Chrome)"]
+    }
+  ]
+}
+
