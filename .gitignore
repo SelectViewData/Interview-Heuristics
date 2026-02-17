@@ -1,8 +1,43 @@
-**/bin/
-**/obj/
+# OS
+.DS_Store
 
+# .NET build output
+**/[Bb]in/
+**/[Oo]bj/
+**/[Ll]og/
+**/[Tt]est[Rr]esult*/
+**/TestResults/
+
+# .NET user/IDE files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+
+# JetBrains
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# NuGet
+*.nupkg
+*.snupkg
+
+# Frontend (Vite/React SPA)
 interviewtask-web/node_modules/
 interviewtask-web/dist/
-interviewtask-web/tsconfig.tsbuildinfo
-interviewtask-web/package-lock.json
+interviewtask-web/.vite/
+interviewtask-web/coverage/
+interviewtask-web/*.local
+interviewtask-web/.env.local
+interviewtask-web/.env.*.local
+interviewtask-web/npm-debug.log*
+interviewtask-web/yarn-debug.log*
+interviewtask-web/yarn-error.log*
+interviewtask-web/pnpm-debug.log*
+interviewtask-web/*.tsbuildinfo
 
+.fake

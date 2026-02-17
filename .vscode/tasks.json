@@ -59,7 +59,21 @@
       "options": {
         "cwd": "${workspaceFolder}/interviewtask-web"
       },
-      "isBackground": true
+      "isBackground": true,
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "problemMatcher": {
+        "owner": "vite",
+        "pattern": {
+          "regexp": ".^"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^.*(vite|VITE).*$",
+          "endsPattern": "^.*(ready in\\s+\\d+\\s+ms|Local:\\s+https?://\\S+).*$"
+        }
+      }
     },
     {
       "label": "Dev: API + Web",

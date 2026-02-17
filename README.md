@@ -111,13 +111,13 @@ Expect a mix of:
 
 ## VS Code (Optional)
 
-1. Open VS Code at this folder (the one containing `InterviewTask.sln`).
-2. Wait for Ionide to finish loading `InterviewTask.sln`.
-3. `Run and Debug`:
-   - `API (.NET)` to run the backend.
-   - `Full stack (API + Web)` to run backend + frontend together.
-4. Or use `Terminal -> Run Task...`:
-   - `Dev: API + Web` (runs both)
+1. Open `Interview-Heuristics.code-workspace` in VS Code.
+2. If VS Code prompts for recommended extensions, install them (or continue without them).
+3. Use `Run and Debug`:
+   - `API (.NET)` to run only the backend.
+   - `Web only (Vite + Chrome)` to run only frontend + browser.
+   - `Full stack (API + Web)` to run backend + frontend + browser.
+4. If you prefer not to install any extensions, use the terminal commands from **Quick Start (Terminal)** above.
 
 ## Technical notes (FYI)
 

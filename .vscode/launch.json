@@ -13,18 +13,19 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "ASPNETCORE_URLS": "http://localhost:5080"
       },
-      "console": "integratedTerminal",
-      "serverReadyAction": {
-        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
-        "uriFormat": "%s/scalar/v1",
-        "action": "openExternally"
-      }
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Web Dev Server (Vite)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev -- --port 5173 --strictPort",
+      "cwd": "${workspaceFolder}/interviewtask-web"
     },
     {
       "name": "Web (Chrome)",
       "type": "pwa-chrome",
       "request": "launch",
-      "preLaunchTask": "Web: dev",
       "url": "http://localhost:5173",
       "webRoot": "${workspaceFolder}/interviewtask-web"
     }
@@ -32,8 +33,13 @@
   "compounds": [
     {
       "name": "Full stack (API + Web)",
-      "configurations": ["API (.NET)", "Web (Chrome)"]
+      "configurations": ["API (.NET)", "Web Dev Server (Vite)", "Web (Chrome)"],
+      "stopAll": true
+    },
+    {
+      "name": "Web only (Vite + Chrome)",
+      "configurations": ["Web Dev Server (Vite)", "Web (Chrome)"],
+      "stopAll": true
     }
   ]
 }
-

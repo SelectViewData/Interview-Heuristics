@@ -1,0 +1,60 @@
+{
+  "folders": [
+    {
+      "name": "Repo",
+      "path": "."
+    },
+    {
+      "name": "API",
+      "path": "InterviewTask.Api"
+    },
+    {
+      "name": "Tests",
+      "path": "InterviewTask.Tests"
+    },
+    {
+      "name": "Web",
+      "path": "interviewtask-web"
+    }
+  ],
+  "settings": {
+    "dotnet.defaultSolution": "InterviewTask.sln",
+    "files.exclude": {
+      "**/.DS_Store": true,
+      "**/bin": true,
+      "**/obj": true,
+      "**/node_modules": true,
+      "**/.vite": true,
+      "**/dist": true
+    },
+    "search.exclude": {
+      "**/bin": true,
+      "**/obj": true,
+      "**/node_modules": true,
+      "**/.vite": true,
+      "**/dist": true,
+      "**/coverage": true
+    },
+    "typescript.tsdk": "interviewtask-web/node_modules/typescript/lib",
+    "editor.formatOnSave": true,
+    "[fsharp]": {
+      "editor.defaultFormatter": "Ionide.Ionide-fsharp"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-dotnettools.csdevkit",
+      "Ionide.Ionide-fsharp",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "bradlc.vscode-tailwindcss",
+      "eamodio.gitlens"
+    ]
+  }
+}
